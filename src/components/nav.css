@@ -10,11 +10,18 @@
 .navigation .nav-list {
     background-color: #E8E8E8;
     height: 100%;
-    width: 200px;
+    width: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 8px;
     /* overflow: hidden; */
+}
+
+
+
+.navigation .nav-list.expanded {
+  width: 200px;
 }
 
 .navigation .nav-list hr {
@@ -24,14 +31,14 @@
   
 }
 
-.navigation .nav-text {
+/* .navigation .nav-text {
   font-family: Arial, sans-serif;
   background-color: #D9D9D9;
-}
-.nav-item-1 > img:hover {
+} */
+.nav-item-1:hover img {
   background-color: #CFCFCF;
   cursor: pointer;
-  content: url(/src/assets/app.png);
+  content: url("/src/assets/app.png");
 }
 
  
@@ -51,9 +58,26 @@
    justify-content: left;
 }
 
-.nav-item-1 div, .nav-item-2 div, .nav-item-3 div {
+/* .nav-item-1 div, .nav-item-2 div, .nav-item-3 div {
   padding-left: 10px;
-  white-space: nowrap;
+  white-space: nowrap; */
   /* display: none; */
+/* } */
+
+.nav-item-1 div,
+.nav-item-2 div,
+.nav-item-3 div {
+  opacity: 0;           /* ẩn */
+  width: 0;             /* tránh chiếm space */
+  overflow: hidden;     
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.nav-list.expanded .nav-item-1 div,
+.nav-list.expanded .nav-item-2 div,
+.nav-list.expanded .nav-item-3 div {
+  opacity: 1;           /* hiện */
+  width: auto;          /* chiếm space bình thường */
+  padding-left: 10px;   /* giữ padding */
 }
 
