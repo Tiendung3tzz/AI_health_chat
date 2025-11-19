@@ -22,6 +22,7 @@
 
 .navigation .nav-list.expanded {
   width: 200px;
+  transition:  0.5s ease;
 }
 
 .navigation .nav-list hr {
@@ -67,17 +68,22 @@
 .nav-item-1 div,
 .nav-item-2 div,
 .nav-item-3 div {
-  opacity: 0;           /* ẩn */
-  width: 0;             /* tránh chiếm space */
+
+  opacity: 0;     
+  height: 0;      
+  width: 0;             
   overflow: hidden;     
-  transition: opacity 0.3s ease, width 0.3s ease;
+  transition: opacity 1s ease, width 0.3s ease;
 }
 
 .nav-list.expanded .nav-item-1 div,
 .nav-list.expanded .nav-item-2 div,
 .nav-list.expanded .nav-item-3 div {
-  opacity: 1;           /* hiện */
-  width: auto;          /* chiếm space bình thường */
-  padding-left: 10px;   /* giữ padding */
+  opacity: 1;           
+  width: auto;
+  height: 24px;     
+  line-height: 24px;   
+  white-space: nowrap;  
+  padding-left: 10px;   
 }
 
