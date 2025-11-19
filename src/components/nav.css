@@ -10,6 +10,7 @@
 .navigation .nav-list {
     background-color: #E8E8E8;
     height: 100%;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +18,9 @@
 }
 
 .navigation .nav-list hr {
-  width: 80%;
+  width: 100%;
   border: 0.5px solid #81808088;
+  border-right: 0;
   
 }
 
@@ -26,15 +28,32 @@
   font-family: Arial, sans-serif;
   background-color: #D9D9D9;
 }
+.nav-item-1 > img:hover {
+  background-color: #CFCFCF;
+  cursor: pointer;
+  content: url(/src/assets/app.png);
+}
+
+ 
+
 
 .navigation .nav-list img {
   width: 24px;
   height: 24px;
 }
 
-.new-chat:hover {
-  background-color: #CFCFCF;
-  cursor: pointer;
-  content: url(/src/assets/app.png);
-  
+
+.nav-item-1, .nav-item-2, .nav-item-3{
+   display: flex;
+   width: 100%;
+   padding-left: 10px;
+   align-items: center;
+   justify-content: left;
 }
+
+.nav-item-1 div, .nav-item-2 div, .nav-item-3 div {
+  padding-left: 10px;
+  white-space: nowrap;
+  /* display: none; */
+}
+
