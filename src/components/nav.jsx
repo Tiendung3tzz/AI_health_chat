@@ -3,20 +3,29 @@ import { useState } from "react";
 export default function Nav() {
   const [disabledHover, setDisabledHover] =  useState(false);
 
-  const handleClick = () => {
-    setDisabledHover(prev => !prev);
+  const handleClick = (n) => {
+    if (!disabledHover) {
+      setDisabledHover(true);
+    }
+    if(n) {
+      setDisabledHover(prev => !prev); 
+    }
+      // setDisabledHover(prev => !prev);      
+
+    
   }
   return (
     <nav className="navigation">
-      <div className="nav-list">
+      <div className={`nav-list nav-text ${disabledHover ? "expanded" : ""}`}>
         <div 
           className={`nav-item-1 ${disabledHover ? "nav-item-disabled" : ""}`} 
-          onClick={handleClick}
+          onClick={() => handleClick(false)}
         >
           <img 
-            src={disabledHover ? "/src/assets/add-post.png" : "/src/assets/app.png"} 
+            src={disabledHover ? "/src/assets/app.png" : "/src/assets/add-post.png"} 
             alt="new chat" 
           />
+          <div>New chat</div>
         </div>
         <hr />
         <div className="nav-item-2">
