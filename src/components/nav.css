@@ -1,0 +1,40 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30px;
+  /* align-items: center; */
+}
+
+.navigation .nav-list {
+    background-color: #E8E8E8;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; */
+}
+
+.navigation .nav-list hr {
+  width: 80%;
+  border: 0.5px solid #81808088;
+  
+}
+
+.navigation .nav-text {
+  font-family: Arial, sans-serif;
+  background-color: #D9D9D9;
+}
+
+.navigation .nav-list img {
+  width: 24px;
+  height: 24px;
+}
+
+.new-chat:hover {
+  background-color: #CFCFCF;
+  cursor: pointer;
+  content: url(/src/assets/app.png);
+  
+}
