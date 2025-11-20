@@ -1,7 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Nav() {
+  
+
   const [disabledHover, setDisabledHover] =  useState(false);
+
+  useEffect(() => {
+    const cls = "nav-expanded";
+    if (disabledHover) {
+      document.body.classList.add(cls);
+    } else {
+      document.body.classList.remove(cls);
+    }
+    return () => document.body.classList.remove(cls);
+  }, [disabledHover]);
 
   const handleClick = (n) => {
     if (!disabledHover) {
