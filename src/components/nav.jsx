@@ -17,19 +17,30 @@ export default function Nav() {
   return (
     <nav className="navigation">
       <div className={`nav-list nav-text ${disabledHover ? "expanded" : ""}`}>
-        <div 
-          className={`nav-item-1 ${disabledHover ? "nav-item-disabled" : ""}`} 
-          onClick={() => handleClick(false)}
-        >
+        <div className="chat-ext">
+          <div 
+            className={`nav-item-1 ${!disabledHover ? "item-1-hover-1" : "item-1-hover-2"} ${disabledHover ? "nav-item-disabled" : ""}`} 
+            onClick={() => handleClick()}
+          >
+            <img 
+              src="/src/assets/add-post.png"
+              alt="new chat" 
+            />
+            <div>New chat</div>
+          </div>
           <img 
-            src={disabledHover ? "/src/assets/app.png" : "/src/assets/add-post.png"} 
-            alt="new chat" 
+              src="/src/assets/app.png"
+              className="img-2"
+              onClick={() => handleClick(1)} 
+              alt="close" 
           />
-          <div>New chat</div>
         </div>
         <hr />
         <div className="nav-item-2">
-          <img src="/src/assets/messenger.png" className="chat-ai" alt="chat ai" />
+          <img 
+            src="/src/assets/messenger.png" 
+            className="chat-ai" alt="chat ai" 
+          />
           <div>Chat AI Health</div>
         </div>
         <hr />
