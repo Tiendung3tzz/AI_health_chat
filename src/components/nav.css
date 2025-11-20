@@ -10,15 +10,19 @@
 .navigation .nav-list {
     background-color: #E8E8E8;
     height: 100%;
-    width: 35px;
+    width: 44px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding-top: 8px;
+    transition: width 0.8s ease;
+
     /* overflow: hidden; */
 }
 
-
+.chat-ext {
+  display: flex;
+}
 
 .navigation .nav-list.expanded {
   width: 200px;
@@ -36,14 +40,41 @@
   font-family: Arial, sans-serif;
   background-color: #D9D9D9;
 } */
-.nav-item-1:hover img {
+.item-1-hover-1:hover img {
   background-color: #CFCFCF;
   cursor: pointer;
   content: url("/src/assets/app.png");
 }
 
- 
+.item-1-hover-2:hover  {
+  background-color: #CFCFCF;
+  cursor: pointer;
+}
 
+
+.img-2 {
+  opacity: 0;     
+  height: 0;      
+  width: 0;             
+  overflow: hidden;     
+  transition: opacity 1s ease, width 1s ease;
+
+}
+
+.nav-list.expanded .img-2 {
+  opacity: 1;           
+  width: auto;
+  height: 24px;     
+  line-height: 24px;   
+  /* white-space: nowrap;   */
+  /* padding-left: 10px;    */
+  transition: opacity 2s ease, width 2s ease;
+}
+ 
+.img-2:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
 
 .navigation .nav-list img {
   width: 24px;
@@ -53,7 +84,7 @@
 
 .nav-item-1, .nav-item-2, .nav-item-3{
    display: flex;
-   width: 100%;
+   width: 90%;
    padding-left: 10px;
    align-items: center;
    justify-content: left;
@@ -73,7 +104,8 @@
   height: 0;      
   width: 0;             
   overflow: hidden;     
-  transition: opacity 1s ease, width 0.3s ease;
+    transition: opacity 1s ease, width 1s ease;
+
 }
 
 .nav-list.expanded .nav-item-1 div,
@@ -85,5 +117,11 @@
   line-height: 24px;   
   white-space: nowrap;  
   padding-left: 10px;   
+  transition: opacity 1s ease, width 1s ease;
+
 }
 
+.img-2 {
+  margin-left: auto;
+  margin-right: 10px;
+}
