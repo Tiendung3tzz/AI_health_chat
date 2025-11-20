@@ -46,7 +46,7 @@
   content: url("/src/assets/app.png");
 }
 
-.item-1-hover-2:hover  {
+.item-1-hover-2:hover, .nav-item-2:hover, .nav-item-3:hover {
   background-color: #CFCFCF;
   cursor: pointer;
 }
