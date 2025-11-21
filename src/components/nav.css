@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: left;
     padding-top: 8px;
-    transition: width 0.8s ease;
+    transition: width 0.5s ease;
 
     /* overflow: hidden; */
 }
@@ -84,8 +84,8 @@
 
 .nav-item-1, .nav-item-2, .nav-item-3{
    display: flex;
-   width: 90%;
-   padding-left: 10px;
+   width: 24px;
+   margin-left: 10px;
    align-items: center;
    justify-content: left;
 }
@@ -118,6 +118,13 @@
   white-space: nowrap;  
   padding-left: 10px;   
   transition: opacity 1s ease, width 1s ease;
+
+}
+
+.nav-list.expanded .nav-item-1,
+.nav-list.expanded .nav-item-2, 
+.nav-list.expanded .nav-item-3 {
+  width: 90%;
 
 }
 
